@@ -7,8 +7,8 @@ from .models import Ship, Speed
 
 def ship_list(request):
     ships = Ship.objects.all()
-    return render(request, "ship_list.html", {"ships": ships})
-    return render(request, "ships_manager_app/ship_list.html", {"ships": ships})
+    return render(request, "ships_manager_app/ship_list.html",
+                  {"ships": ships})
 
 
 def check_for_speed(form):
