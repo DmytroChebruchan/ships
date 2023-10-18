@@ -14,21 +14,24 @@ class Migration(migrations.Migration):
             model_name="speed",
             name="consumption_additional",
             field=models.FloatField(
-                default=0, validators=[django.core.validators.MaxValueValidator(20.0)]
+                default=0,
+                validators=[django.core.validators.MaxValueValidator(20.0)],
             ),
         ),
         migrations.AlterField(
             model_name="speed",
             name="consumption_main",
             field=models.FloatField(
-                default=0, validators=[django.core.validators.MaxValueValidator(120.0)]
+                default=0,
+                validators=[django.core.validators.MaxValueValidator(120.0)],
             ),
         ),
         migrations.AlterField(
             model_name="speed",
             name="speed_in_kn",
             field=models.FloatField(
-                default=0, validators=[django.core.validators.MaxValueValidator(100.0)]
+                default=0,
+                validators=[django.core.validators.MaxValueValidator(100.0)],
             ),
         ),
     ]
