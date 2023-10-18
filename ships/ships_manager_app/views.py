@@ -5,13 +5,10 @@ from .forms import ShipForm, SpeedForm
 from .models import Speed, Ship
 
 
-def index(request):
-    return HttpResponse("Hello, world. You're at the ships index.")
-
-
 def ship_list(request):
     ships = Ship.objects.all()
-    return render(request, "ship_list.html", {"ships": ships})
+    return render(request, "ships_manager_app/ship_list.html",
+                  {"ships": ships})
 
 
 def check_for_speed(form):
@@ -52,14 +49,14 @@ def add_ship(request):
                     print(form)
                     create_speed_object(form, ship)
 
-            return redirect("ship_list")
+            return redirect("/ship_list")
     else:
         ship_form = ShipForm()
         speed_formset = SpeedFormSet()
 
     return render(
         request,
-        "add_ship.html",
+        "ships_manager_app/add_ship.html",
         {"ship_form": ship_form, "speed_formset": speed_formset},
     )
 
