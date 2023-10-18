@@ -6,7 +6,10 @@ from django.db import migrations, models
 
 class Migration(migrations.Migration):
     dependencies = [
-        ("ships_manager_app", "0006_alter_speed_consumption_additional_and_more"),
+        (
+            "ships_manager_app",
+            "0006_alter_speed_consumption_additional_and_more",
+        ),
     ]
 
     operations = [

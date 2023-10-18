@@ -19,6 +19,6 @@ from django.contrib import admin
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('ships_manager_app/', include('ships_manager_app.urls')),
+    path("ships_manager_app/", include("ships_manager_app.urls")),
     # Add other project-wide URL patterns here
 ]

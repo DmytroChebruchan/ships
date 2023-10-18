@@ -13,7 +13,8 @@ class Migration(migrations.Migration):
             model_name="speed",
             name="load_status",
             field=models.CharField(
-                choices=[("ballast", "Ballast"), ("laden", "Laden")], max_length=10
+                choices=[("ballast", "Ballast"), ("laden", "Laden")],
+                max_length=10,
             ),
         ),
     ]
