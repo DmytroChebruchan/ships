@@ -1,0 +1,35 @@
+<!-- ship_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ship List</title>
+  </head>
+  <body>
+    <h2>List of Ships</h2>
+    <ul>
+      {% for ship in ships %}
+      <li>
+        <strong>Name:</strong> {{ ship.name }}<br />
+        <strong>Year of Built:</strong> {{ ship.year_of_built }}<br />
+        <strong>Speeds:</strong>
+        <ul>
+          {% for speed in ship.speed_set.all %}
+          <li>
+            <strong>Name:</strong> {{ speed.name }}<br />
+            <strong>Speed in kn:</strong> {{ speed.speed_in_kn }}<br />
+            <strong>Main Consumption:</strong> {{ speed.consumption_main }}<br />
+            <strong>Additional Consumption:</strong>
+            {{ speed.consumption_additional }}<br />
+            <hr />
+          </li>
+          {% endfor %}
+        </ul>
+        <hr />
+      </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>

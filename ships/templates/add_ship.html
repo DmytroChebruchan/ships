@@ -1,0 +1,96 @@
+<!-- add_ship.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Ship</title>
+  </head>
+  <body>
+    <h2>Add Ship</h2>
+    <form method="post">
+      {% csrf_token %}
+      <label for="id_name">Name:</label><br />
+      {{ ship_form.name }}<br /><br />
+      <label for="id_year_of_built">Year of Built:</label><br />
+      {{ ship_form.year_of_built }}<br /><br />
+
+      <fieldset>
+        <legend>Speeds</legend>
+        {{ speed_formset.management_form }}
+        <div class="row">
+          <div class="col">
+            <label for="id_load_status_0">Load status:</label><br />
+            <select name="load_status_0" id="id_load_status_0">
+              <option value="ballast" selected>Ballast</option>
+            </select>
+            <br />
+            <label for="id_name_0">Name:</label><br />
+            {{ speed_formset.0.name }}<br />
+            <label for="id_speed_in_kn_0">Speed in kn:</label><br />
+            {{ speed_formset.0.speed_in_kn }}<br />
+            <label for="id_consumption_main_0">Main Consumption:</label><br />
+            {{ speed_formset.0.consumption_main }}<br />
+            <label for="id_consumption_additional_0"
+              >Additional Consumption:</label
+            ><br />
+            {{ speed_formset.0.consumption_additional }}<br /><br />
+          </div>
+          <div class="col">
+            <label for="id_load_status_1">Load status:</label><br />
+            <select name="load_status_1" id="id_load_status_1">
+              <option value="ballast" selected>Ballast</option>
+            </select>
+            <br />
+            <label for="id_name_1">Name:</label><br />
+            {{ speed_formset.1.name }}<br />
+            <label for="id_speed_in_kn_1">Speed in kn:</label><br />
+            {{ speed_formset.1.speed_in_kn }}<br />
+            <label for="id_consumption_main_1">Main Consumption:</label><br />
+            {{ speed_formset.1.consumption_main }}<br />
+            <label for="id_consumption_additional_1"
+              >Additional Consumption:</label
+            ><br />
+            {{ speed_formset.1.consumption_additional }}<br /><br />
+          </div>
+          <div class="col">
+            <label for="id_load_status_2">Load status:</label><br />
+            <select name="load_status_2" id="id_load_status_2">
+              <option value="laden" selected>Laden</option>
+            </select>
+            <br />
+            <label for="id_name_2">Name:</label><br />
+            {{ speed_formset.2.name }}<br />
+            <label for="id_speed_in_kn_2">Speed in kn:</label><br />
+            {{ speed_formset.2.speed_in_kn }}<br />
+            <label for="id_consumption_main_2">Main Consumption:</label><br />
+            {{ speed_formset.2.consumption_main }}<br />
+            <label for="id_consumption_additional_2"
+              >Additional Consumption:</label
+            ><br />
+            {{ speed_formset.2.consumption_additional }}<br /><br />
+          </div>
+          <div class="col">
+            <label for="id_load_status_3">Load status:</label><br />
+            <select name="load_status_3" id="id_load_status_3">
+              <option value="laden" selected>Laden</option>
+            </select>
+            <br />
+            <label for="id_name_3">Name:</label><br />
+            {{ speed_formset.3.name }}<br />
+            <label for="id_speed_in_kn_3">Speed in kn:</label><br />
+            {{ speed_formset.3.speed_in_kn }}<br />
+            <label for="id_consumption_main_3">Main Consumption:</label><br />
+            {{ speed_formset.3.consumption_main }}<br />
+            <label for="id_consumption_additional_3"
+              >Additional Consumption:</label
+            ><br />
+            {{ speed_formset.3.consumption_additional }}<br /><br />
+          </div>
+        </div>
+      </fieldset>
+      <button type="submit">Add Ship</button>
+    </form>
+  </body>
+</html>
