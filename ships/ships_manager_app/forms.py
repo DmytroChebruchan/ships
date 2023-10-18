@@ -1,6 +1,7 @@
 # forms.py
-from .models import Ship, Speed
 from django import forms
+
+from .models import Ship, Speed
 
 
 class ShipForm(forms.ModelForm):
