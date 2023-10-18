@@ -34,6 +34,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "booking_manager_app.apps.BookingManagerAppConfig",
     "ships_manager_app.apps.ShipsManagerAppConfig",
     "django.contrib.admin",
     "django.contrib.auth",
